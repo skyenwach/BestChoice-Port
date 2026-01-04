@@ -1,8 +1,20 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { MapPin, Mail, Phone, ArrowLeft, GraduationCap, Briefcase, Handshake, Award, Sparkles, ExternalLink } from "lucide-react";
+import {
+  MapPin,
+  Mail,
+  Phone,
+  ArrowLeft,
+  GraduationCap,
+  Briefcase,
+  Handshake,
+  Award,
+  Sparkles,
+  ExternalLink,
+} from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const experiences = [
@@ -13,8 +25,8 @@ const experiences = [
     points: [
       "Generates content calendar using google excel sheet, sends for approval monthly",
       "Crafts and executes dynamic video edits to captivate target audiences and accomplish project objectives",
-      "Monitors, tracks & analysis performance on social media plattorms using tools like instagram insights, meta business suite"
-    ]
+      "Monitors, tracks & analysis performance on social media plattorms using tools like instagram insights, meta business suite",
+    ],
   },
   {
     title: "SOCIAL MEDIA MANAGER & GRAPHICS DESIGNER",
@@ -25,8 +37,8 @@ const experiences = [
       "Edits pictures & videos according to content calendar using canva pro, Corel draw, photoshop & CapCut",
       "Plans digital campaigns",
       "Conceptualize and produce engaging content for social media platform (IG)",
-      "Replies comments and direct messages"
-    ]
+      "Replies comments and direct messages",
+    ],
   },
   {
     title: "SOCIAL MEDIA MANAGER & CONTENT CREATOR",
@@ -38,8 +50,8 @@ const experiences = [
       "Monitors, tracks & analysis performance on social media plattorms using tools like instagram insights",
       "Respond to comments, direct messages, e-mails & phone calls",
       "Creates content calendar, designs & edits informative pictures & videos",
-      "Implements sound effects and music to enhance overall effect of film or video"
-    ]
+      "Implements sound effects and music to enhance overall effect of film or video",
+    ],
   },
   {
     title: "SOCIAL MEDIA MANAGER & GRAPHICS DESIGNER",
@@ -51,9 +63,9 @@ const experiences = [
       "Shares edited videos/ pictures on IG",
       "Capture high-quality product and lifestyle images for use in marketing materials, ensuring proper lighting, composition, and editing",
       "Work closely with cross-functional teams to brainstorm ideas, develop concepts, and execute projects that align with beauty & fashion",
-      "Actively seek feedback from customers"
-    ]
-  }
+      "Actively seek feedback from customers",
+    ],
+  },
 ];
 
 export default function CVPage() {
@@ -64,7 +76,6 @@ export default function CVPage() {
       {/* Hero Section */}
       <section className="relative py-24 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#74c7ec]/10 via-transparent to-[#74c7ec]/5" />
-
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
@@ -98,8 +109,6 @@ export default function CVPage() {
               Social Media Manager & Content Strategist
             </p>
           </motion.div>
-
-
         </div>
       </section>
 
@@ -115,11 +124,17 @@ export default function CVPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-4"
             >
-              <a href="mailto:Akosuachoice@gmail.com" className="flex items-center gap-3 glass-card px-6 py-4 hover:scale-105 hover:shadow-lg hover:shadow-[#74c7ec]/10 transition-all group">
+              <a
+                href="mailto:Akosuachoice@gmail.com"
+                className="flex items-center gap-3 glass-card px-6 py-4 hover:scale-105 hover:shadow-lg hover:shadow-[#74c7ec]/10 transition-all group"
+              >
                 <Mail className="w-5 h-5 text-[#74c7ec] group-hover:scale-110 transition-transform" />
                 <span className="font-medium">Akosuachoice@gmail.com</span>
               </a>
-              <a href="tel:+2348117756100" className="flex items-center gap-3 glass-card px-6 py-4 hover:scale-105 hover:shadow-lg hover:shadow-[#74c7ec]/10 transition-all group">
+              <a
+                href="tel:+2348117756100"
+                className="flex items-center gap-3 glass-card px-6 py-4 hover:scale-105 hover:shadow-lg hover:shadow-[#74c7ec]/10 transition-all group"
+              >
                 <Phone className="w-5 h-5 text-[#74c7ec] group-hover:scale-110 transition-transform" />
                 <span className="font-medium">+234 811 7756 100</span>
               </a>
@@ -149,7 +164,10 @@ export default function CVPage() {
                 About
               </h2>
               <p className="text-foreground/80 leading-relaxed relative z-10">
-                Creative and results driven Social Media Manager with proven experience managing multiple brands across diverse industries, skilled in developing content strategies that increase engagement, reach, and brand visibility.
+                Creative and results driven Social Media Manager with proven
+                experience managing multiple brands across diverse industries,
+                skilled in developing content strategies that increase
+                engagement, reach, and brand visibility.
               </p>
             </motion.div>
 
@@ -175,7 +193,9 @@ export default function CVPage() {
               <div className="space-y-4 relative z-10">
                 <div>
                   <h3 className="font-bold text-lg mb-1">Mass Communication</h3>
-                  <p className="text-foreground/70 mb-1">Ajayi Crowther University</p>
+                  <p className="text-foreground/70 mb-1">
+                    Ajayi Crowther University
+                  </p>
                   <p className="text-sm text-foreground/60">2018 - 2022</p>
                 </div>
                 <div className="pt-4 border-t border-border">
@@ -210,7 +230,7 @@ export default function CVPage() {
                   "Social media strategy and management",
                   "Analytics and performance tracking",
                   "Brand development and community engagement",
-                  "Campaign planning and execution"
+                  "Campaign planning and execution",
                 ].map((item, i) => (
                   <motion.li
                     key={i}
@@ -225,7 +245,9 @@ export default function CVPage() {
                       transition={{ duration: 0.3 }}
                       className="w-2 h-2 bg-[#74c7ec] rounded-full mt-2 flex-shrink-0"
                     />
-                    <span className="text-foreground/90 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300">{item}</span>
+                    <span className="text-foreground/90 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300">
+                      {item}
+                    </span>
                   </motion.li>
                 ))}
               </ul>
@@ -238,12 +260,16 @@ export default function CVPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="glass-card p-10 hover:shadow-2xl hover:shadow-[#74c7ec]/10 transition-all duration-500"
-              style={{ transformStyle: 'preserve-3d' }}
+              style={{ transformStyle: "preserve-3d" }}
             >
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   className="p-2 bg-[#74c7ec]/10 rounded-lg"
                 >
                   <Sparkles className="w-6 h-6 text-[#74c7ec]" />
@@ -262,14 +288,19 @@ export default function CVPage() {
                   "Canva Pro",
                   "Corel Draw",
                   "Photoshop",
-                  "CapCut"
+                  "CapCut",
                 ].map((skill, i) => (
                   <motion.span
                     key={i}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.08, type: "spring", bounce: 0.5 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: i * 0.08,
+                      type: "spring",
+                      bounce: 0.5,
+                    }}
                     whileHover={{ scale: 1.1, y: -4 }}
                     className="px-4 py-2 bg-[#74c7ec]/10 border border-[#74c7ec]/20 text-sm font-semibold rounded-lg hover:bg-[#74c7ec]/20 hover:border-[#74c7ec]/40 hover:shadow-lg hover:shadow-[#74c7ec]/20 transition-all cursor-default"
                   >
@@ -290,9 +321,12 @@ export default function CVPage() {
               <div className="inline-block p-3 bg-[#74c7ec]/10 rounded-2xl mb-4">
                 <Handshake className="w-8 h-8 text-[#74c7ec]" />
               </div>
-              <h2 className="text-2xl font-bold mb-3">Let&apos;s Work Together</h2>
+              <h2 className="text-2xl font-bold mb-3">
+                Let&apos;s Work Together
+              </h2>
               <p className="text-sm text-foreground/80 mb-6">
-                Ready to take your social media presence to the next level? Let&apos;s discuss how I can help grow your brand.
+                Ready to take your social media presence to the next level?
+                Let&apos;s discuss how I can help grow your brand.
               </p>
               <Link
                 href="/#contact"
@@ -342,7 +376,7 @@ export default function CVPage() {
                         transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
                         className="absolute left-0 top-6 w-4 h-4 bg-[#74c7ec] rounded-full border-4 border-background shadow-lg shadow-[#74c7ec]/50"
                         style={{
-                          transform: 'translateX(-7.5px)'
+                          transform: "translateX(-7.5px)",
                         }}
                       />
 
@@ -351,8 +385,12 @@ export default function CVPage() {
                           <div className="inline-block px-3 py-1 bg-[#74c7ec]/20 text-[#74c7ec] text-xs font-bold rounded-full mb-4 tracking-wider">
                             {exp.period}
                           </div>
-                          <h3 className="text-xl font-bold mb-2 group-hover:text-[#74c7ec] transition-colors">{exp.title}</h3>
-                          <p className="text-[#74c7ec] font-bold text-lg">{exp.company}</p>
+                          <h3 className="text-xl font-bold mb-2 group-hover:text-[#74c7ec] transition-colors">
+                            {exp.title}
+                          </h3>
+                          <p className="text-[#74c7ec] font-bold text-lg">
+                            {exp.company}
+                          </p>
                         </div>
                         <ul className="space-y-3">
                           {exp.points.map((point, i) => (
@@ -361,11 +399,18 @@ export default function CVPage() {
                               initial={{ opacity: 0, x: -10 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true }}
-                              transition={{ duration: 0.4, delay: idx * 0.1 + i * 0.05 }}
+                              transition={{
+                                duration: 0.4,
+                                delay: idx * 0.1 + i * 0.05,
+                              }}
                               className="flex gap-3 hover:translate-x-2 transition-transform"
                             >
-                              <span className="text-[#74c7ec] mt-1 flex-shrink-0 font-bold">→</span>
-                              <span className="text-foreground/80 leading-relaxed">{point}</span>
+                              <span className="text-[#74c7ec] mt-1 flex-shrink-0 font-bold">
+                                →
+                              </span>
+                              <span className="text-foreground/80 leading-relaxed">
+                                {point}
+                              </span>
                             </motion.li>
                           ))}
                         </ul>

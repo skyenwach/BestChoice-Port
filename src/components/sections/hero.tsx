@@ -32,8 +32,10 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-[0.9]"
           >
-            Engage.<br />
-            <span className="text-primary">Convert.</span><br />
+            Engage.
+            <br />
+            <span className="text-primary">Convert.</span>
+            <br />
             Repeat.
           </motion.h1>
 
@@ -43,7 +45,7 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl font-light"
           >
-            Olukoju BestChoice | Social Media Strategist | Mass-Comm BSc
+            Olukoju BestChoice | Social Media Manager | Mass-Comm BSc
           </motion.p>
 
           <motion.div
@@ -80,8 +82,18 @@ export function Hero() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 View CV
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </span>
             </Link>
@@ -92,7 +104,13 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.8, repeat: Infinity, repeatType: "reverse", repeatDelay: 0.5 }}
+        transition={{
+          delay: 1.2,
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 0.5,
+        }}
         className="absolute bottom-8 right-8 text-white/80 text-sm uppercase tracking-widest hidden lg:block"
       >
         Scroll to explore

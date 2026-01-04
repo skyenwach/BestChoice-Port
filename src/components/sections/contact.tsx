@@ -20,7 +20,8 @@ export function Contact() {
             Let&apos;s Connect
           </div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Ready to take social media<br />off your plate?
+            Ready to take social media
+            <br /> management off your plate?
           </h2>
           <p className="text-xl opacity-80 max-w-2xl mx-auto">
             Book a free 20-minute strategy call.
@@ -34,13 +35,21 @@ export function Contact() {
             className="glass-card p-16 text-center border-2 border-primary"
           >
             <div className="w-24 h-24 bg-primary flex items-center justify-center mx-auto mb-8">
-              <svg className="w-12 h-12 text-background" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-12 h-12 text-background"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
-            <h3 className="text-3xl font-bold mb-4">
-              Message sent!
-            </h3>
+            <h3 className="text-3xl font-bold mb-4">Message sent!</h3>
             <p className="text-xl opacity-80">
               Expect a reply within 24 hours.
             </p>
@@ -59,7 +68,7 @@ export function Contact() {
               fetch(form.action, {
                 method: form.method,
                 body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
+                headers: { Accept: "application/json" },
               }).finally(() => {
                 setIsSubmitting(false);
                 setSubmitted(true);
@@ -67,12 +76,19 @@ export function Contact() {
             }}
             className="glass-card p-12 border-2 border-border hover:border-foreground/50 transition-colors duration-500"
           >
-            <input type="hidden" name="_subject" value="New Contact from Portfolio" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Contact from Portfolio"
+            />
             <input type="hidden" name="_captcha" value="false" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold mb-3 uppercase tracking-wider">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold mb-3 uppercase tracking-wider"
+                >
                   Name *
                 </label>
                 <input
@@ -85,7 +101,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-3 uppercase tracking-wider">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold mb-3 uppercase tracking-wider"
+                >
                   Email *
                 </label>
                 <input
@@ -99,7 +118,10 @@ export function Contact() {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="instagram" className="block text-sm font-semibold mb-3 uppercase tracking-wider">
+              <label
+                htmlFor="instagram"
+                className="block text-sm font-semibold mb-3 uppercase tracking-wider"
+              >
                 Instagram handle *
               </label>
               <input
@@ -113,7 +135,10 @@ export function Contact() {
             </div>
 
             <div className="mb-8">
-              <label htmlFor="pain-point" className="block text-sm font-semibold mb-3 uppercase tracking-wider">
+              <label
+                htmlFor="pain-point"
+                className="block text-sm font-semibold mb-3 uppercase tracking-wider"
+              >
                 Biggest pain-point *
               </label>
               <textarea

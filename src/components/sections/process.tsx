@@ -12,7 +12,7 @@ const steps = [
       "Comprehensive social media audit",
       "Competitor analysis & benchmarks",
       "Brand voice & messaging workshop",
-      "Goal setting & KPI definition"
+      "Goal setting & KPI definition",
     ],
   },
   {
@@ -23,7 +23,7 @@ const steps = [
       "Content calendar development",
       "Visual asset creation",
       "Automation setup & testing",
-      "Campaign launch preparation"
+      "Campaign launch preparation",
     ],
   },
   {
@@ -34,7 +34,7 @@ const steps = [
       "Weekly performance analysis",
       "A/B testing & optimization",
       "Scaling successful campaigns",
-      "Continuous strategy refinement"
+      "Continuous strategy refinement",
     ],
   },
 ];
@@ -42,8 +42,6 @@ const steps = [
 export function Process() {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-
-
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,9 +52,13 @@ export function Process() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
             My Process
           </h2>
+          <p className="text-xl opacity-70">
+            This proven 3-step process has helped 15+ brands achieve sustainable
+            social media growth.
+            <br />
+            Let&apos;s see what it can do for you.
+          </p>
         </motion.div>
-
-
 
         <div className="relative">
           {/* Timeline line */}
@@ -81,7 +83,11 @@ export function Process() {
                 </div>
 
                 {/* Content card - left side on desktop for even indices */}
-                <div className={`ml-24 md:ml-0 ${isEven ? 'md:col-start-1 md:text-right' : 'md:col-start-2'}`}>
+                <div
+                  className={`ml-24 md:ml-0 ${
+                    isEven ? "md:col-start-1 md:text-right" : "md:col-start-2"
+                  }`}
+                >
                   <div className="glass-card p-8 rounded-lg group transition-all duration-500">
                     <div className="relative">
                       <h3 className="text-3xl font-bold mb-2 text-foreground">
@@ -90,10 +96,16 @@ export function Process() {
                       <p className="text-sm text-primary mb-4 font-semibold uppercase tracking-wider">
                         {step.description}
                       </p>
-                      <ul className={`space-y-2 ${isEven ? 'md:text-right' : ''}`}>
+                      <ul
+                        className={`space-y-2 ${isEven ? "md:text-right" : ""}`}
+                      >
                         {step.details.map((detail) => (
                           <li key={detail} className="flex items-start gap-2">
-                            <span className={`w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0 ${isEven ? 'md:order-2' : ''}`} />
+                            <span
+                              className={`w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0 ${
+                                isEven ? "md:order-2" : ""
+                              }`}
+                            />
                             <span className="flex-1">{detail}</span>
                           </li>
                         ))}
@@ -103,20 +115,15 @@ export function Process() {
                 </div>
 
                 {/* Empty space for alternating layout on desktop */}
-                <div className={`hidden md:block ${isEven ? 'md:col-start-2' : 'md:col-start-1'}`} />
+                <div
+                  className={`hidden md:block ${
+                    isEven ? "md:col-start-2" : "md:col-start-1"
+                  }`}
+                />
               </motion.div>
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-xl opacity-70">This proven 3-step process has helped 15+ brands achieve sustainable social media growth. Let&apos;s see what it can do for you.</p>
-        </motion.div>
       </div>
     </section>
   );
