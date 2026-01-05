@@ -4,10 +4,21 @@ import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
+function AnimatedNumber({
+  value,
+  suffix = "",
+}: {
+  value: number;
+  suffix?: string;
+}) {
   const ref = useRef<HTMLParagraphElement>(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 2000, bounce: 0, damping: 30, stiffness: 100 });
+  const springValue = useSpring(motionValue, {
+    duration: 2000,
+    bounce: 0,
+    damping: 30,
+    stiffness: 100,
+  });
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
@@ -19,20 +30,24 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
   useEffect(() => {
     springValue.on("change", (latest) => {
       if (ref.current) {
-        const formatted = Number.isInteger(value) ? Math.round(latest).toString() : latest.toFixed(1);
+        const formatted = Number.isInteger(value)
+          ? Math.round(latest).toString()
+          : latest.toFixed(1);
         ref.current.textContent = `${formatted}${suffix}`;
       }
     });
   }, [springValue, suffix, value]);
 
-  return <p ref={ref} className="text-4xl font-bold text-primary mb-2">0{suffix}</p>;
+  return (
+    <p ref={ref} className="text-4xl font-bold text-primary mb-2">
+      0{suffix}
+    </p>
+  );
 }
 
 export function About() {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-
-
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -86,31 +101,42 @@ export function About() {
           >
             <div className="space-y-6">
               <p className="text-xl md:text-2xl leading-relaxed">
-                I help brands show up consistently online, keeping them running even while you sleep. From beauty brands to real estate, to food businesses to podcasts and so much more.
+                I help brands show up consistently online, keeping them running
+                even while they sleep. From beauty brands to real estate, to
+                food businesses to podcasts and so much more.
               </p>
               <p className="text-lg leading-relaxed opacity-80">
-                I have helped founders take back their time and show up with a voice that feels true to them, not like everyone else. Your page grows, your inbox buzzes, and you get to stay focused on building your own brand.
+                I have helped founders take back their time and show up with a
+                voice that feels true to them, not like everyone else. Your page
+                grows, your inbox buzzes, and you get to stay focused on
+                building your own brand.
               </p>
-
-
             </div>
 
             <div className="grid grid-cols-2 gap-4 pt-8">
               <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
                 <AnimatedNumber value={87.5} suffix="%" />
-                <p className="text-sm opacity-70 uppercase tracking-wide">Success Rate (Last 5 Years)</p>
+                <p className="text-sm opacity-70 uppercase tracking-wide">
+                  Success Rate (Last 5 Years)
+                </p>
               </div>
               <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
                 <AnimatedNumber value={35} suffix="%" />
-                <p className="text-sm opacity-70 uppercase tracking-wide">Avg Increase in Qualified Reach</p>
+                <p className="text-sm opacity-70 uppercase tracking-wide">
+                  Avg Increase in Qualified Reach
+                </p>
               </div>
               <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
                 <AnimatedNumber value={3} suffix="×" />
-                <p className="text-sm opacity-70 uppercase tracking-wide">ROAS Across Paid Campaigns</p>
+                <p className="text-sm opacity-70 uppercase tracking-wide">
+                  ROAS Across Paid Campaigns
+                </p>
               </div>
               <div className="glass-card p-6 hover:scale-105 transition-transform duration-300">
                 <AnimatedNumber value={0} />
-                <p className="text-sm opacity-70 uppercase tracking-wide">Missed Launch Days (24mo)</p>
+                <p className="text-sm opacity-70 uppercase tracking-wide">
+                  Missed Launch Days (24mo)
+                </p>
               </div>
             </div>
           </motion.div>
