@@ -136,7 +136,7 @@ export default function CVPage() {
                 className="flex items-center gap-3 glass-card px-6 py-4 hover:scale-105 hover:shadow-lg hover:shadow-[#74c7ec]/10 transition-all group"
               >
                 <Phone className="w-5 h-5 text-[#74c7ec] group-hover:scale-110 transition-transform" />
-                <span className="font-medium">+234 811 7756 100</span>
+                <span className="font-medium">+234 707 404 6879</span>
               </a>
               <div className="flex items-center gap-3 glass-card px-6 py-4">
                 <MapPin className="w-5 h-5 text-[#74c7ec]" />
